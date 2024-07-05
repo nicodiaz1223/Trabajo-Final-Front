@@ -3,29 +3,21 @@ import axios, { AxiosResponse } from "axios";
 export type RegisterResponse = string;
 
 export interface RegisterRequest {
-    iddocumento: string;
-    idtipousuario: number;
-    idtipocontextura: number;
-    idpais: number;
-    idespecialidad: number;
-    idescuadra: number;
-    tipodocumentousuario: string;
     nombreusuario: string;
     apellidousuario: string;
-    generousuario: string;
     correousuario: string;
-    contrasenausuario: string; 
-    pesousuario: number;
-    potenciausuario: number;
-    acelaracionusuario: number;
-    velocidadpromediousuario: number;
-    velocidadmaximausuario: number;
-    tiempociclista: number;
-    anosexperiencia: number;
-    gradorampa: number;
+    contrasenausuario: string;
+    confirmPassword: string;
+    documentousuario: string;
+    iddocumento: number;
+    fechanacimiento: Date;
+    generousuario: string;
+    nacionalidad: string;
+    tipousuario: string;
+    fechainiciocarrera: Date;
 }
 
-export async function register(request: RegisterRequest): Promise<RegisterResponse> {
+export async function registerS(request: RegisterRequest): Promise<RegisterResponse> {
     try {
         const response: AxiosResponse<RegisterResponse> = await axios.post("https://isuci-back.onrender.com/registro", request);
 
