@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 'use client';
 
 import { MainLayout } from "@/layouts";
@@ -69,23 +70,23 @@ export default function DirectorDetalle() {
                         />
                     </div>
                     <div className="flex flex-col items-start justify-center text-black tracking-[1px] space-y-4">
-                        <h1 className="text-[30px] font-bold text-red-500">{director.nombreusuario} {director.apellidousuario}</h1>
-                        <div className="border border-red-500 p-2 rounded-lg w-full">
-                            <h1>ID: {director.iddocumento}</h1>
+                        <h1 className="text-[30px] font-bold text-red-600">{director.nombreusuario} {director.apellidousuario}</h1>
+                        <div className="border border-red-600 p-2 rounded-lg w-full">
+                            <h1>Documento: {director.iddocumento}</h1>
                         </div>
-                        <div className="border border-red-500 p-2 rounded-lg w-full">
+                        <div className="border border-red-600 p-2 rounded-lg w-full">
                             <h1>Correo: {director.correousuario}</h1>
                         </div>
-                        <div className="border border-red-500 p-2 rounded-lg w-full">
+                        <div className="border border-red-600 p-2 rounded-lg w-full">
                             <h1>País: {director.idpais}</h1>
                         </div>
-                        <div className="border border-red-500 p-2 rounded-lg w-full">
+                        <div className="border border-red-600 p-2 rounded-lg w-full">
                             <h1>Escuadra: {director.idescuadra}</h1>
                         </div>
-                        <div className="border border-red-500 p-2 rounded-lg w-full">
+                        <div className="border border-red-600 p-2 rounded-lg w-full">
                             <h1>Años de Experiencia: {director.anosexperiencia ?? 'N/A'}</h1>
                         </div>
-                        <div className="border border-red-500 p-2 rounded-lg w-full">
+                        <div className="border border-red-600 p-2 rounded-lg w-full">
                             <h1>Nombre Escuadra: {director.nombreEscuadra}</h1>
                         </div>
                     </div>

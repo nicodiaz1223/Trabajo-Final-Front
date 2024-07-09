@@ -81,7 +81,7 @@ export default function CiclistaDetalle() {
                             <h1 className="text-[30px] font-bold text-red-600">{ciclista.nombreusuario} {ciclista.apellidousuario}</h1>
                         </div>
                         <div className="border border-red-600 p-2 rounded-lg">
-                            <h1>ID: {ciclista.iddocumento}</h1>
+                            <h1>Documento: {ciclista.iddocumento}</h1>
                         </div>
                         <div className="border border-red-600 p-2 rounded-lg">
                             <h1>Correo: {ciclista.correousuario}</h1>

@@ -1,18 +1,18 @@
+/* eslint-disable @next/next/no-img-element */
 'use client';
 
-import { MainLayout } from "@/layouts";
+import { MainLayout } from "../../../layouts";
 import { useSearchParams } from 'next/navigation';
 import { useEffect, useState } from 'react';
-import { Button } from "@/components/Button";
-import Image from 'next/image';
 import axios from 'axios'; // Importar axios para hacer la llamada a la API
+import React from "react";
 
 interface Administrador {
     iddocumento: string;
     nombreusuario: string;
     apellidousuario: string;
     correousuario: string;
-    idpais: string;
+    idpais: string; 
     idescuadra: string;
     anosexperiencia: number | null;
 }
@@ -68,20 +68,20 @@ export default function AdministradorDetalle() {
                         />
                     </div>
                     <div className="flex flex-col items-start justify-center text-black tracking-[1px] space-y-4">
-                        <h1 className="text-[30px] font-bold text-red-500">{administrador.nombreusuario} {administrador.apellidousuario}</h1>
-                        <div className="border border-red-500 p-2 rounded-lg w-full">
-                            <h1>ID: {administrador.iddocumento}</h1>
+                        <h1 className="text-[30px] font-bold text-red-600">{administrador.nombreusuario} {administrador.apellidousuario}</h1>
+                        <div className="border border-red-600 p-2 rounded-lg w-full">
+                            <h1>Documento: {administrador.iddocumento}</h1>
                         </div>
-                        <div className="border border-red-500 p-2 rounded-lg w-full">
+                        <div className="border border-red-600 p-2 rounded-lg w-full">
                             <h1>Correo: {administrador.correousuario}</h1>
                         </div>
-                        <div className="border border-red-500 p-2 rounded-lg w-full">
+                        <div className="border border-red-600 p-2 rounded-lg w-full">
                             <h1>País: {administrador.idpais}</h1>
                         </div>
-                        <div className="border border-red-500 p-2 rounded-lg w-full">
+                        <div className="border border-red-600 p-2 rounded-lg w-full">
                             <h1>Escuadra: {administrador.idescuadra}</h1>
                         </div>
-                        <div className="border border-red-500 p-2 rounded-lg w-full">
+                        <div className="border border-red-600 p-2 rounded-lg w-full">
                             <h1>Años de Experiencia: {administrador.anosexperiencia ?? 'N/A'}</h1>
                         </div>
                     </div>
